@@ -80,7 +80,6 @@ $(document).ready(function() {
   console.log(csharpScore);
   console.log(winner);
 
-
-    event.preventDefault();
+  event.preventDefault();
   });
 });
