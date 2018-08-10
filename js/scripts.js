@@ -12,6 +12,7 @@ $(document).ready(function() {
   var q3Answer = parseInt($("#q3").val());
   var q4Answer = parseInt($("#q4").val());
   var q5Answer = parseInt($("#q5").val());
+  var userName = $("#userName").val();
 
   if (q1Answer === 1) {
     cssScore += 1;
@@ -63,6 +64,8 @@ $(document).ready(function() {
     var winner = "csharp";
     $("#csharpCard").show();
   }
+
+  $(".userName").text(userName);
 
 
   console.log(cssScore);
