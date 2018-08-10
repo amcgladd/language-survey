@@ -60,18 +60,18 @@ $(document).ready(function() {
   }
 
   if ((cssScore >= rubyScore) && (cssScore >= csharpScore)) {
-    var winner = "css";
-    $("#cssCard").slideToggle();
+    var winner = "CSS / React";
+    $('#cssModal').modal('toggle');
   } else if ((rubyScore >= cssScore) && (rubyScore >= csharpScore)) {
-    var winner = "ruby";
-    $("#rubyCard").slideToggle();
+    var winner = "Ruby / Rails";
+    $('#rubyModal').modal('toggle');
   } else if ((csharpScore >= cssScore) && (csharpScore >= rubyScore)) {
-    var winner = "csharp";
-    $("#csharpCard").slideToggle();
+    var winner = "C# / .NET";
+    $('#csharpModal').modal('toggle');
   }
 
   $(".userName").text(userName);
-
+  $(".winner").text(winner);
 
   console.log(cssScore);
   console.log(rubyScore);
