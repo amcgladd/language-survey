@@ -8,8 +8,13 @@
 
 .winner {
   font-size: 36px;
+  color: #7fdbcf;
 }
 
 .alert {
   display: none;
+}
+
+label {
+  font-size: 24px;
 }
