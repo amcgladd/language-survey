@@ -59,7 +59,9 @@ $(document).ready(function() {
     csharpScore += 1;
   }
 
-  if ((cssScore >= rubyScore) && (cssScore >= csharpScore)) {
+  if (cssScore === 0 && rubyScore === 0 && csharpScore === 0) {
+    alert("Whoops! You need to answer at least one question");
+  } else if ((cssScore >= rubyScore) && (cssScore >= csharpScore)) {
     var winner = "CSS / React";
     $('#cssModal').modal('toggle');
   } else if ((rubyScore >= cssScore) && (rubyScore >= csharpScore)) {

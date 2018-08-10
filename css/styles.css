@@ -9,3 +9,7 @@
 .winner {
   font-size: 36px;
 }
+
+.alert {
+  display: none;
+}
