@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Language Survey</title>
+    <title>Track Suggester</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
@@ -12,76 +12,118 @@
   <body>
 
 <div class="container">
+<div class="jumbotron">
 
 
-
-      <h1>Answer these questions:</h1>
+      <h1>Let's learn more about you:</h1>
       <form id="inputForm">
 
         <div class="form-group">
-          <label for="q1">1. Who do you see yourself working for?</label>
-          <select class="form-control" id="q1">
-            <option value="1">A web design firm</option>
-            <option value="2">A hot new startup</option>
-            <option value="3">A bigger established business</option>
-          </select>
+          <div class="row">
+            <div class="col-md-4">
+                <label for="q1">1. Who do you see yourself working for?</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="q1">
+                <option value="1">A web design firm</option>
+                <option value="2">A hot new startup</option>
+                <option value="3">A bigger established business</option>
+              </select>
+            </div>
+          </div>
+
+
         </div>
 
         <div class="form-group">
-          <label for="q2">2. Are you more interested in the visual aspect of a page, or the behind-the-scenes mechanics?</label>
-          <select class="form-control" id="q2">
-            <option value="1">Visual aspect</option>
-            <option value="2">A little of both</option>
-            <option value="3">The behind-the-scenes mechanics</option>
-          </select>
+          <div class="row">
+            <div class="col-md-4">
+                <label for="q2">2. Are you more interested in the visual aspect of a page, or the behind-the-scenes mechanics?</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="q2">
+                <option value="1">Visual aspect</option>
+                <option value="2">A little of both</option>
+                <option value="3">The behind-the-scenes mechanics</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="q3">3. What do you want to build?</label>
-          <select class="form-control" id="q3">
-            <option value="1">Dynamic, interactive user interfaces</option>
-            <option value="2">Interactive web applications</option>
-            <option value="3">Internal software for businesses</option>
-          </select>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="q3">3. What do you want to build?</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="q3">
+                <option value="1">Dynamic, interactive user interfaces</option>
+                <option value="2">Interactive web applications</option>
+                <option value="3">Internal software for businesses</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="q4">4. Which Portland-based company would you be interested in working for?</label>
-          <select class="form-control" id="q4">
-            <option value="1">Nike</option>
-            <option value="2">New Relic</option>
-            <option value="3">Windsor</option>
-          </select>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="q4">4. Which Portland-based company would you be interested in working for?</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="q4">
+                <option value="1">Nike</option>
+                <option value="2">New Relic</option>
+                <option value="3">Windsor</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="q5">5. Are you more experimental or traditional?</label>
-          <select class="form-control" id="q5">
-            <option value="1">Experimental</option>
-            <option value="2">A little of both</option>
-            <option value="3">Traditional</option>
-          </select>
+          <div class="row">
+            <div class="col-md-4">
+                <label for="q5">5. Are you more experimental or traditional?</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="q5">
+                <option value="1">Experimental</option>
+                <option value="2">A little of both</option>
+                <option value="3">Traditional</option>
+              </select>
+            </div>
+          </div>
+
+
         </div>
 
         <div class="form-group">
-          <label for="userNamet">What's your name:</label>
-          <input type="text" class="form-control" id="userName">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="userNamet">What's your name:</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="userName">
+            </div>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary">Let's See!</button>
 
       </form>
 
+</div>
       <!--css modal-->
       <div class="modal" tabindex="-1" role="dialog" id="cssModal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title"><span class="userName"></span>, you should consider: <span class="winner"></span></h5>
+              <h5 class="modal-title"><span class="userName"></span>, you should consider:</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
+              <span class="winner"></span>
               <p><span class="bold">CSS</span> is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. <span class="bold">React</span> is a JavaScript library used to create dynamic, interactive user interfaces.</p>
             </div>
             <div class="modal-footer">
@@ -98,12 +140,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title"><span class="userName"></span>, you should consider: <span class="winner"></span></h5>
+              <h5 class="modal-title"><span class="userName"></span>, you should consider:</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
+              <span class="winner"></span>
               <p><span class="bold">Ruby</span> is a programming language focused on simplicity and productivity. <span class="bold">Rails</span> is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”.</p>
             </div>
             <div class="modal-footer">
@@ -119,12 +162,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title"><span class="userName"></span>, you should consider: <span class="winner"></span></h5>
+              <h5 class="modal-title"><span class="userName"></span>, you should consider:</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
+              <span class="winner"></span>
               <p>The <span class="bold">C# ("C sharp")</span> programming language is most commonly used with the .NET framework. <span class="bold">.NET</span> is a software framework developed by Microsoft and primarily used on Microsoft Windows.</p>
             </div>
             <div class="modal-footer">
@@ -134,53 +178,6 @@
           </div>
         </div>
       </div>
-
-
-      <!--css Card-->
-      <div class="card" id="cssCard">
-        <div class="card-header">
-          <span class="userName"></span>, you should consider:
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">CSS/React</h5>
-          <p class="card-text"><span class="bold">CSS</span> is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. <span class="bold">React</span> is a JavaScript library used to create dynamic, interactive user interfaces.
-
-          <a href="https://www.epicodus.com/react" target="_blank" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-
-      <!--ruby card-->
-      <div class="card" id="rubyCard">
-        <div class="card-header">
-          <span class="userName"></span>, you should consider:
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Ruby/Rails</h5>
-          <p class="card-text"><p><span class="bold">Ruby</span> is a programming language focused on simplicity and productivity. <span class="bold">Rails</span> is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”.</p>
-
-          <a href="https://www.epicodus.com/ruby" target="_blank" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-
-      <!--csharp card-->
-      <div class="card" id="csharpCard">
-        <div class="card-header">
-          <span class="userName"></span>, you should consider:
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">C#/.NET</h5>
-          <p class="card-text"><p>The <span class="bold">C# ("C sharp")</span> programming language is most commonly used with the .NET framework. <span class="bold">.NET</span> is a software framework developed by Microsoft and primarily used on Microsoft Windows.</p>
-
-          <a href="https://www.epicodus.com/c-sharp" target="_blank" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-
-
-
-
-
-
-
 
 </div>
 
