@@ -14,6 +14,11 @@ $(document).ready(function() {
   var q5Answer = parseInt($("#q5").val());
   var userName = $("#userName").val();
 
+  if(!userName) {
+    alert("Please enter your name.")
+    return;
+  }
+
   if (q1Answer === 1) {
     cssScore += 1;
   } else if (q1Answer === 2) {
@@ -56,13 +61,13 @@ $(document).ready(function() {
 
   if ((cssScore >= rubyScore) && (cssScore >= csharpScore)) {
     var winner = "css";
-    $("#cssCard").show();
+    $("#cssCard").slideToggle();
   } else if ((rubyScore >= cssScore) && (rubyScore >= csharpScore)) {
     var winner = "ruby";
-    $("#rubyCard").show();
+    $("#rubyCard").slideToggle();
   } else if ((csharpScore >= cssScore) && (csharpScore >= rubyScore)) {
     var winner = "csharp";
-    $("#csharpCard").show();
+    $("#csharpCard").slideToggle();
   }
 
   $(".userName").text(userName);
