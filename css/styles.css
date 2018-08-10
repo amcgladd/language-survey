@@ -1,18 +1,13 @@
-.card {
-  display: none;
-}
-
 .bold {
   font-weight: bold;
 }
 
-.winner {
-  font-size: 36px;
-  color: #7fdbcf;
+.card {
+  display: none;
 }
 
-.alert {
-  display: none;
+.winner {
+  font-size: 24px;
 }
 
 label {

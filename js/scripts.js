@@ -63,13 +63,13 @@ $(document).ready(function() {
     alert("Whoops! You need to answer at least one question");
   } else if ((cssScore >= rubyScore) && (cssScore >= csharpScore)) {
     var winner = "CSS / React";
-    $('#cssModal').modal('toggle');
+    $('#cssCard').slideToggle();
   } else if ((rubyScore >= cssScore) && (rubyScore >= csharpScore)) {
     var winner = "Ruby / Rails";
-    $('#rubyModal').modal('toggle');
+    $('#rubyCard').slideToggle();
   } else if ((csharpScore >= cssScore) && (csharpScore >= rubyScore)) {
     var winner = "C# / .NET";
-    $('#csharpModal').modal('toggle');
+    $('#csharpCard').slideToggle();
   }
 
   $(".userName").text(userName);

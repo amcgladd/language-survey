@@ -13,20 +13,18 @@
   <body>
 
 <div class="container">
-<div class="jumbotron">
-  <h1 class="display-4">Track Suggester</h1>
-   <p class="lead">Choosing the right track for you can be difficult. Answer a few questions to see which track we recommend for you.</p>
-     <hr class="my-4">
-  <div class="row">
+  <div class="jumbotron">
+    <h1 class="display-4">Track Suggester</h1>
+    <p class="lead">Choosing the right track for you can be difficult. Answer a few questions to see which track we recommend for you.</p>
+    <hr class="my-4">
+    <div class="row">
     <div class="col-md-6">
-
       <form id="inputForm">
         <h1 class="display-4">About you:</h1>
         <div class="form-group">
           <div class="row">
             <div class="col">
-                <label class="lead" for="q1">1. Who do you see yourself working for?</label>
-
+              <label class="lead" for="q1">1. Who do you see yourself working for?</label>
               <select class="form-control" id="q1">
                 <option value="0"></option>
                 <option value="1">A web design firm</option>
@@ -35,15 +33,12 @@
               </select>
             </div>
           </div>
-
-
         </div>
 
         <div class="form-group">
           <div class="row">
             <div class="col">
-                <label class="lead" for="q2">2. Are you more interested in the visual aspect of a page, or the behind-the-scenes mechanics?</label>
-
+              <label class="lead" for="q2">2. Are you more interested in the visual aspect of a page, or the behind-the-scenes mechanics?</label>
               <select class="form-control" id="q2">
                 <option value="0"></option>
                 <option value="1">Visual aspect</option>
@@ -58,7 +53,6 @@
           <div class="row">
             <div class="col">
               <label class="lead" for="q3">3. What do you want to build?</label>
-
               <select class="form-control" id="q3">
                 <option value="0"></option>
                 <option value="1">Dynamic, interactive user interfaces</option>
@@ -73,7 +67,6 @@
           <div class="row">
             <div class="col">
               <label class="lead" for="q4">4. Which Portland-based company would you be interested in working for?</label>
-
               <select class="form-control" id="q4">
                 <option value="0"></option>
                 <option value="1">Nike</option>
@@ -87,8 +80,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col">
-                <label class="lead" for="q5">5. Are you more experimental or traditional?</label>
-
+              <label class="lead" for="q5">5. Are you more experimental or traditional?</label>
               <select class="form-control" id="q5">
                 <option value="0"></option>
                 <option value="1">Experimental</option>
@@ -97,8 +89,6 @@
               </select>
             </div>
           </div>
-
-
         </div>
 
         <div class="form-group">
@@ -109,9 +99,46 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Let's See!</button>
 
+        <button type="submit" class="btn btn-primary">Let's See!</button>
       </form>
+    </div>
+
+    <!--Right Column-->
+    <div class="col-md-6">
+      <h1 class="display-4">We Suggest:</h1>
+
+      <!--cssCard-->
+      <div class="card" style="width: 18rem;" id="cssCard">
+        <div class="card-body">
+          <h5 class="card-title"><span class="userName"></span>, you should consider:</h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span class="winner"></span></h6>
+          <p><span class="bold">CSS</span> is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. <span class="bold">React</span> is a JavaScript library used to create dynamic, interactive user interfaces.</p>
+          <a class="card-link" href="https://www.epicodus.com/react">Learn More</a>
+        </div>
+      </div>
+
+      <!--rubyCard-->
+      <div class="card" style="width: 18rem;" id="rubyCard">
+        <div class="card-body">
+          <h5 class="card-title"><span class="userName"></span>, you should consider:</h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span class="winner"></span></h6>
+          <p><span class="bold">Ruby</span> is a programming language focused on simplicity and productivity. <span class="bold">Rails</span> is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”.</p>
+          <a class="card-link" href="https://www.epicodus.com/ruby">Learn More</a>
+        </div>
+      </div>
+
+      <!--csharpCard-->
+      <div class="card" style="width: 18rem;" id="csharpCard">
+        <div class="card-body">
+          <h5 class="card-title"><span class="userName"></span>, you should consider:</h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span class="winner"></span></h6>
+            <p>The <span class="bold">C# ("C sharp")</span> programming language is most commonly used with the .NET framework. <span class="bold">.NET</span> is a software framework developed by Microsoft and primarily used on Microsoft Windows.</p>
+          <a class="card-link" href="https://www.epicodus.com/c-sharp">Learn More</a>
+        </div>
+      </div>
+
+
     </div>
     </div>
   </div>
@@ -119,72 +146,12 @@
 
 
 
-      <!--css modal-->
-      <div class="modal" tabindex="-1" role="dialog" id="cssModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"><span class="userName"></span>, you should consider:</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <span class="winner"></span>
-              <p><span class="bold">CSS</span> is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. <span class="bold">React</span> is a JavaScript library used to create dynamic, interactive user interfaces.</p>
-            </div>
-            <div class="modal-footer">
-              <a class="btn btn-primary" href="https://www.epicodus.com/react" role="button">Learn More</a>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
-      <!--ruby modal-->
-      <div class="modal" tabindex="-1" role="dialog" id="rubyModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"><span class="userName"></span>, you should consider:</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <span class="winner"></span>
-              <p><span class="bold">Ruby</span> is a programming language focused on simplicity and productivity. <span class="bold">Rails</span> is a web development framework written in the Ruby language and typically referred to as “Ruby on Rails”.</p>
-            </div>
-            <div class="modal-footer">
-              <a class="btn btn-primary" href="https://www.epicodus.com/ruby" role="button">Learn More</a>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!--csharp modal-->
-      <div class="modal" tabindex="-1" role="dialog" id="csharpModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"><span class="userName"></span>, you should consider:</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <span class="winner"></span>
-              <p>The <span class="bold">C# ("C sharp")</span> programming language is most commonly used with the .NET framework. <span class="bold">.NET</span> is a software framework developed by Microsoft and primarily used on Microsoft Windows.</p>
-            </div>
-            <div class="modal-footer">
-              <a class="btn btn-primary" href="https://www.epicodus.com/c-sharp" role="button">Learn More</a>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+
 
 
 
