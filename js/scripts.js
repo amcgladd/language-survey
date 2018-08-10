@@ -3,6 +3,7 @@ var cssScore = 0;
 var rubyScore = 0;
 var csharpScore = 0;
 
+
 // Front-End logic
 $(document).ready(function() {
   $("#inputForm").submit(function(event) {
@@ -53,10 +54,13 @@ $(document).ready(function() {
   }
 
   if ((cssScore >= rubyScore) && (cssScore >= csharpScore)) {
+    var winner = "css";
     $("#cssCard").show();
   } else if ((rubyScore >= cssScore) && (rubyScore >= csharpScore)) {
+    var winner = "ruby";
     $("#rubyCard").show();
   } else if ((csharpScore >= cssScore) && (csharpScore >= rubyScore)) {
+    var winner = "csharp";
     $("#csharpCard").show();
   }
 
@@ -64,6 +68,8 @@ $(document).ready(function() {
   console.log(cssScore);
   console.log(rubyScore);
   console.log(csharpScore);
+  console.log(winner);
+
 
     event.preventDefault();
   });
