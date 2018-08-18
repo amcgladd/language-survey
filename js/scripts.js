@@ -3,6 +3,15 @@ var cssScore = 0;
 var rubyScore = 0;
 var csharpScore = 0;
 
+function calculateScore(answer) {
+  if (answer === 1) {
+    cssScore += 1;
+  } else if (answer === 2) {
+    rubyScore += 1;
+  } else if (answer === 3) {
+    csharpScore += 1;
+  }
+}
 
 // Front-End logic
 $(document).ready(function() {
@@ -19,45 +28,11 @@ $(document).ready(function() {
     return;
   }
 
-  if (q1Answer === 1) {
-    cssScore += 1;
-  } else if (q1Answer === 2) {
-    rubyScore += 1;
-  } else if (q1Answer === 3) {
-    csharpScore += 1;
-  }
-
-  if (q2Answer === 1) {
-    cssScore += 1;
-  } else if (q2Answer === 2) {
-    rubyScore += 1;
-  } else if (q2Answer === 3) {
-    csharpScore += 1;
-  }
-
-  if (q3Answer === 1) {
-    cssScore += 1;
-  } else if (q3Answer === 2) {
-    rubyScore += 1;
-  } else if (q3Answer === 3) {
-    csharpScore += 1;
-  }
-
-  if (q4Answer === 1) {
-    cssScore += 1;
-  } else if (q4Answer === 2) {
-    rubyScore += 1;
-  } else if (q4Answer === 3) {
-    csharpScore += 1;
-  }
-
-  if (q5Answer === 1) {
-    cssScore += 1;
-  } else if (q5Answer === 2) {
-    rubyScore += 1;
-  } else if (q5Answer === 3) {
-    csharpScore += 1;
-  }
+    calculateScore(q1Answer);
+    calculateScore(q2Answer);
+    calculateScore(q3Answer);
+    calculateScore(q4Answer);
+    calculateScore(q5Answer);
 
   if (cssScore === 0 && rubyScore === 0 && csharpScore === 0) {
     alert("Whoops! You need to answer at least one question");
@@ -74,11 +49,6 @@ $(document).ready(function() {
 
   $(".userName").text(userName);
   $(".winner").text(winner);
-
-  console.log(cssScore);
-  console.log(rubyScore);
-  console.log(csharpScore);
-  console.log(winner);
 
   event.preventDefault();
   });
